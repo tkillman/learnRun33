@@ -1,5 +1,6 @@
 import FormView from '../views/FormView.js'
 import ResultView from '../views/ResultView.js'
+import TabView from '../views/TabView.js'
 
 import SearchResultModel from '../models/SearchResultModel.js'
 
@@ -12,7 +13,10 @@ export default {
         FormView.setup(document.querySelector('form'))
             .on('@submit', (e) => this.searchValue(e))
 
-        ResultView.setup(document.querySelector('#searchResultList'));    
+        ResultView.setup(document.querySelector('#searchResultList'));
+        
+        TabView.setup(document.querySelector('#tab'));
+        
     },
     searchValue(e){
         console.log(tag, 'searchValue()',e.detail.inputValue);

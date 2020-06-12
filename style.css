@@ -41,6 +41,7 @@ button[type=reset]::before{
     background-color:#cccccc;
     color:white;
     padding : 10px 0px; 
+    cursor: pointer;
 }
 
 .tab{
@@ -79,3 +80,9 @@ button[type=reset]::before{
 .searchResultList ul li{
     display: flex;   
 }
+
+#tab ul li.active{
+    color: #fff;
+    background-color:#2ac1bc;
+}
+
