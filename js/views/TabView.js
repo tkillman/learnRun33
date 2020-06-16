@@ -9,10 +9,7 @@ TabView.setup = function (el) {
 
     //이벤트를 연결하는 메소드
     this.bindEvents();
-
-    // 선택된 탭을 활성화시키는 메소드
-    const selectedTabName = '추천 검색어';
-    TabView.setActiveTab(selectedTabName);    
+    return this    
 }
 
 //이벤트를 연결하는 메소드
@@ -22,6 +19,7 @@ TabView.bindEvents = function () {
             console.log(tag, 'bindEvents()');
             //선택된 탭을 활성화시키는 메소드
             TabView.setActiveTab(li.innerHTML);
+            this.emit('@onChange', {tabName : li.innerHTML})
         })
     })
 }
